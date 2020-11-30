@@ -25,6 +25,7 @@
     border-radius: 10px;
     box-shadow: 0 20px 25px 1px rgba(0, 0, 0, 0.07);
     text-align: left;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -36,7 +37,10 @@
 #link-collector-modal-content,
 #link-collector-modal-content h1,
 #link-collector-modal-content span,
-#link-collector-modal-content p {
+#link-collector-modal-content p,
+#link-collector-modal-content button,
+#link-collector-modal-content input,
+#link-collector-modal-content label {
     color: #666 !important;
     font-family: "Roboto", Helvetica, sans-serif !important;
     font-weight: 700 !important;
@@ -53,7 +57,7 @@
 #link-collector-modal-header h1 {
     margin: 0;
     padding: 0;
-    font-size: 2.2em;
+    font-size: 22px;
     line-height: 1.3;
     display: inline-block;
     position: relative;
@@ -90,23 +94,47 @@
 .link-collector-modal-form-group label,
 .link-collector-modal-form-group input {
     margin: 5px 2px;
+    font-size: 18px;
 }
 
 .link-collector-modal-form-group input {
-    padding: 12px 20px;
-    border: solid 2px #b5c5ff
+    padding: 6px 10px;
+    border: solid 2px #b5c5ff;
+    font-size: 16px;
+    outline: none;
+}
+
+.link-collector-modal-form-group input::placeholder {
+    color: #aaa;
 }
 
 .link-collector-modal-form-group input:focus {
     outline: none;
 }
 
-#link-collector-modal-button {
-    margin: auto;
-    padding: 5px 10px;
+.link-collector-modal-button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
 }
 
-#link-collector-modal-loader-wrapper {
+#link-collector-modal-button,
+#link-collector-modal-button:active,
+#link-collector-modal-button:hover,
+#link-collector-modal-button:focus {
+    margin: auto;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: solid 2px #b5c5ff;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.link-collector-modal-full-wrapper {
     content: '';
     width: 100%;
     height: 100%;

@@ -2,7 +2,7 @@
     "name": "KNI Link Collector tool",
     "version": "0.1",
     "description": "Collect interesting links and share them with KNI members.",
-	"permissions": ["declarativeContent","contextMenus","tabs","<all_urls>"],
+	"permissions": ["declarativeContent","contextMenus","tabs","<all_urls>","storage"],
 	"background": {
 	  "page": "pages/background.html",
       "persistent": false

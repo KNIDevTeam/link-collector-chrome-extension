@@ -69,6 +69,9 @@
             modalHtml += '<form class="link-collector-modal-form" id="link-collector-modal-add-link-form">';
             modalHtml += '<div class="link-collector-modal-form-group"><label>Link</label><input id="link-collector-link" name="link-collector-link" placeholder="https://kni.mini.pw.edu.pl" value="' + window.location.href +'" required></div>';
             modalHtml += '<div class="link-collector-modal-form-group"><label>Link description</label><input id="link-collector-description" name="link-collector-description" placeholder="Very interesting link" required></div>';
+            modalHtml += '<div class="link-collector-modal-form-group"><label>Category</label><select id="link-collector-category" name="link-collector-description" required>' +
+                '<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option>' +
+                '</select></div>';
             modalHtml += '<div class="link-collector-modal-button-group"><button id="link-collector-modal-button">Save</button></div>';
             modalHtml += '</form>';
         } else {
@@ -195,7 +198,8 @@
 
             let data = {
                 url: document.getElementById('link-collector-link').value,
-                description: document.getElementById('link-collector-description').value
+                description: document.getElementById('link-collector-description').value,
+                categoryId: parseInt(document.getElementById('link-collector-category').value)
             }
 
             result = await fetch(HOST + "/link/", {
